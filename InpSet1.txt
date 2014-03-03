@@ -1,0 +1,207 @@
+Test to http://54.186.13.225/phpinfo.php
+---------------------------------------------------------------------------
+config: ./http_load -rate 5 -seconds 5 urls.txt
+----
+
+24 fetches, 1 max parallel, 1.20396e+06 bytes, in 5.00049 seconds
+50165 mean bytes/connection
+4.79953 fetches/sec, 240769 bytes/sec
+msecs/connect: 1.67463 mean, 8.594 max, 1.063 min
+msecs/first-response: 2.18792 mean, 3.686 max, 1.493 min
+HTTP response codes:
+  code 200 -- 24
+----
+config: ./http_load -rate 50 -seconds 1 urls.txt
+----
+
+49 fetches, 2 max parallel, 2.45808e+06 bytes, in 1.00003 seconds
+50165 mean bytes/connection
+48.9985 fetches/sec, 2.45801e+06 bytes/sec
+msecs/connect: 1.14778 mean, 1.582 max, 0.763 min
+msecs/first-response: 1.86996 mean, 10.078 max, 1.293 min
+HTTP response codes:
+  code 200 -- 49
+
+----
+config: http_load-12mar2006]$ ./http_load -rate 500 -seconds 1 urls.txt
+----
+
+495 fetches, 19 max parallel, 2.48317e+07 bytes, in 1.00005 seconds
+50165 mean bytes/connection
+494.975 fetches/sec, 2.48304e+07 bytes/sec
+msecs/connect: 2.2999 mean, 14.844 max, 0.686 min
+msecs/first-response: 5.23933 mean, 68.51 max, 1.439 min
+HTTP response codes:
+  code 200 -- 495
+
+
+----
+config: ./http_load -rate 1000 -seconds 1 urls.txt
+----
+
+615 fetches, 385 max parallel, 3.08515e+07 bytes, in 1.00004 seconds
+50165 mean bytes/connection
+614.974 fetches/sec, 3.08501e+07 bytes/sec
+msecs/connect: 3.14157 mean, 13.702 max, 1.105 min
+msecs/first-response: 154.398 mean, 528.667 max, 1.973 min
+HTTP response codes:
+  code 200 -- 615
+
+--------------------------------------------------------------
+
+Test to ./http_load -rate 5 -seconds 1 htmlTest.txt
+-----------------------------------------------------
+config: ./http_load -rate 5 -seconds 1 htmlTest.txt
+----
+4 fetches, 1 max parallel, 416 bytes, in 1.00111 seconds
+104 mean bytes/connection
+3.99557 fetches/sec, 415.54 bytes/sec
+msecs/connect: 1.35775 mean, 1.552 max, 1.215 min
+msecs/first-response: 1.69975 mean, 1.862 max, 1.548 min
+HTTP response codes:
+  code 200 -- 4
+
+
+----
+config: ./http_load -rate 50 -seconds 1 htmlTest.txt
+----
+
+49 fetches, 1 max parallel, 5096 bytes, in 1.00003 seconds
+104 mean bytes/connection
+48.9987 fetches/sec, 5095.87 bytes/sec
+msecs/connect: 1.14933 mean, 1.442 max, 0.774 min
+msecs/first-response: 1.32463 mean, 1.707 max, 0.997 min
+HTTP response codes:
+  code 200 -- 49
+
+
+----
+config: ./http_load -rate 500 -seconds 1 htmlTest.txt
+----
+
+498 fetches, 3 max parallel, 51792 bytes, in 1.00002 seconds
+104 mean bytes/connection
+497.991 fetches/sec, 51791 bytes/sec
+msecs/connect: 1.08931 mean, 1.894 max, 0.657 min
+msecs/first-response: 1.2951 mean, 2.635 max, 0.823 min
+HTTP response codes:
+  code 200 -- 498
+
+----
+config ./http_load -rate 1000 -seconds 1 htmlTest.txt
+----
+
+997 fetches, 4 max parallel, 103688 bytes, in 1.00003 seconds
+104 mean bytes/connection
+996.973 fetches/sec, 103685 bytes/sec
+msecs/connect: 1.11088 mean, 1.984 max, 0.589 min
+msecs/first-response: 1.27642 mean, 3.385 max, 0.918 min
+HTTP response codes:
+  code 200 -- 997
+
+---------------------------------------------------------------------------
+
+Test to http://54.186.13.225/test.html
+
+-------------------------------------------
+----
+config ./http_load -rate 5 -seconds 1 htmlTest.txt
+----
+
+4 fetches, 1 max parallel, 416 bytes, in 1.00007 seconds
+104 mean bytes/connection
+3.99972 fetches/sec, 415.971 bytes/sec
+msecs/connect: 1.19225 mean, 1.365 max, 1.009 min
+msecs/first-response: 1.5455 mean, 1.773 max, 1.407 min
+HTTP response codes:
+  code 200 -- 4
+
+----
+config ./http_load -rate 50 -seconds 1 htmlTest.txt
+----
+
+49 fetches, 1 max parallel, 5096 bytes, in 1.00003 seconds
+104 mean bytes/connection
+48.9987 fetches/sec, 5095.86 bytes/sec
+msecs/connect: 1.2901 mean, 7.879 max, 0.872 min
+msecs/first-response: 1.3609 mean, 1.609 max, 1.03 min
+HTTP response codes:
+  code 200 -- 49
+
+----
+config ./http_load -rate 500 -seconds 1 htmlTest.txt
+----
+
+499 fetches, 7 max parallel, 51896 bytes, in 1 seconds
+104 mean bytes/connection
+498.999 fetches/sec, 51895.8 bytes/sec
+msecs/connect: 1.95164 mean, 11.395 max, 0.722 min
+msecs/first-response: 1.64216 mean, 11.614 max, 0.789 min
+HTTP response codes:
+  code 200 -- 499
+
+
+----
+config ./http_load -rate 1000 -seconds 1 htmlTest.txt
+----
+
+997 fetches, 4 max parallel, 103688 bytes, in 1.00001 seconds
+104 mean bytes/connection
+996.993 fetches/sec, 103687 bytes/sec
+msecs/connect: 1.11446 mean, 2.287 max, 0.619 min
+msecs/first-response: 1.29161 mean, 2.826 max, 0.763 min
+HTTP response codes:
+  code 200 -- 997
+
+----------------------------------------------------------
+Test to: http://54.186.13.225/phpinfo.php
+-----------------------------------------------
+
+----
+config: ./http_load -rate 5 -seconds 1 phptest.txt
+----
+
+4 fetches, 1 max parallel, 200660 bytes, in 1.00002 seconds
+50165 mean bytes/connection
+3.99991 fetches/sec, 200656 bytes/sec
+msecs/connect: 1.42625 mean, 1.542 max, 1.189 min
+msecs/first-response: 1.996 mean, 2.088 max, 1.801 min
+HTTP response codes:
+  code 200 -- 4
+
+----
+config: ./http_load -rate 50 -seconds 1 phptest.txt
+----
+
+49 fetches, 1 max parallel, 2.45808e+06 bytes, in 1.00003 seconds
+50165 mean bytes/connection
+48.9987 fetches/sec, 2.45802e+06 bytes/sec
+msecs/connect: 1.15437 mean, 1.535 max, 0.855 min
+msecs/first-response: 1.725 mean, 2.146 max, 1.302 min
+HTTP response codes:
+  code 200 -- 49
+
+----
+config: ./http_load -rate 500 -seconds 1 phptest.txt
+----
+
+494 fetches, 7 max parallel, 2.47815e+07 bytes, in 1.00002 seconds
+50165 mean bytes/connection
+493.989 fetches/sec, 2.47809e+07 bytes/sec
+msecs/connect: 1.77842 mean, 3.323 max, 0.788 min
+msecs/first-response: 2.23262 mean, 4.418 max, 1.453 min
+HTTP response codes:
+  code 200 -- 494
+
+
+----
+config: ./http_load -rate 1000 -seconds 1 phptest.txt
+----
+
+599 fetches, 401 max parallel, 3.00488e+07 bytes, in 1.00001 seconds
+50165 mean bytes/connection
+598.994 fetches/sec, 3.00485e+07 bytes/sec
+msecs/connect: 2.40749 mean, 4.235 max, 1.133 min
+msecs/first-response: 161.579 mean, 550.369 max, 1.607 min
+HTTP response codes:
+  code 200 -- 599
